@@ -1,0 +1,461 @@
+{
+  "modules": [
+    {
+      "name": "UserModule",
+      "description": "Handles user authentication and profile management",
+      "functions": [
+        "login",
+        "logout",
+        "resetPassword",
+        "updateProfile"
+      ]
+    },
+    {
+      "name": "DatabaseModule",
+      "description": "Manages database connections and operations",
+      "functions": [
+        "connect",
+        "disconnect",
+        "executeQuery",
+        "beginTransaction"
+      ]
+    },
+    {
+      "name": "Their product listingsManager",
+      "description": "Handles operations related to their product listings",
+      "functions": [
+        "manageTheir product listings",
+        "getTheir product listings",
+        "updateTheir product listings",
+        "deleteTheir product listings"
+      ]
+    },
+    {
+      "name": "Ing including paymentManager",
+      "description": "Handles operations related to ing including payment",
+      "functions": [
+        "processIng including payment",
+        "getIng including payment",
+        "updateIng including payment",
+        "deleteIng including payment"
+      ]
+    },
+    {
+      "name": "Reports on sales performanceManager",
+      "description": "Handles operations related to reports on sales performance",
+      "functions": [
+        "generateReports on sales performance",
+        "getReports on sales performance",
+        "updateReports on sales performance",
+        "deleteReports on sales performance"
+      ]
+    },
+    {
+      "name": "Product details  addManager",
+      "description": "Handles operations related to product details  add",
+      "functions": [
+        "viewProduct details  add",
+        "getProduct details  add",
+        "updateProduct details  add",
+        "deleteProduct details  add"
+      ]
+    },
+    {
+      "name": "Products to their shoppingManager",
+      "description": "Handles operations related to products to their shopping",
+      "functions": [
+        "addProducts to their shopping",
+        "getProducts to their shopping",
+        "updateProducts to their shopping",
+        "deleteProducts to their shopping"
+      ]
+    },
+    {
+      "name": "Manage their productManager",
+      "description": "Handles operations related to manage their product",
+      "functions": [
+        "createManage their product",
+        "getManage their product",
+        "updateManage their product",
+        "deleteManage their product"
+      ]
+    },
+    {
+      "name": "For products by nameManager",
+      "description": "Handles operations related to for products by name",
+      "functions": [
+        "searchFor products by name",
+        "getFor products by name",
+        "updateFor products by name",
+        "deleteFor products by name"
+      ]
+    },
+    {
+      "name": "User accounts  approveManager",
+      "description": "Handles operations related to user accounts  approve",
+      "functions": [
+        "manageUser accounts  approve",
+        "getUser accounts  approve",
+        "updateUser accounts  approve",
+        "deleteUser accounts  approve"
+      ]
+    }
+  ],
+  "schemas": [
+    {
+      "table_name": "customer",
+      "fields": [
+        {
+          "name": "id",
+          "type": "INTEGER",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME",
+          "description": "Creation timestamp"
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)",
+          "description": "User's full name"
+        },
+        {
+          "name": "email",
+          "type": "VARCHAR(100)",
+          "description": "User's email address"
+        },
+        {
+          "name": "password",
+          "type": "VARCHAR(255)",
+          "description": "Encrypted password"
+        }
+      ]
+    },
+    {
+      "table_name": "admin",
+      "fields": [
+        {
+          "name": "id",
+          "type": "INTEGER",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME",
+          "description": "Creation timestamp"
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)",
+          "description": "User's full name"
+        },
+        {
+          "name": "email",
+          "type": "VARCHAR(100)",
+          "description": "User's email address"
+        },
+        {
+          "name": "password",
+          "type": "VARCHAR(255)",
+          "description": "Encrypted password"
+        }
+      ]
+    },
+    {
+      "table_name": "order",
+      "fields": [
+        {
+          "name": "id",
+          "type": "INTEGER",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME",
+          "description": "Creation timestamp"
+        },
+        {
+          "name": "user_id",
+          "type": "INTEGER",
+          "description": "Reference to user"
+        },
+        {
+          "name": "total",
+          "type": "DECIMAL(10,2)",
+          "description": "Order total amount"
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(50)",
+          "description": "Order status"
+        }
+      ]
+    },
+    {
+      "table_name": "user",
+      "fields": [
+        {
+          "name": "id",
+          "type": "INTEGER",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME",
+          "description": "Creation timestamp"
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)",
+          "description": "User's full name"
+        },
+        {
+          "name": "email",
+          "type": "VARCHAR(100)",
+          "description": "User's email address"
+        },
+        {
+          "name": "password",
+          "type": "VARCHAR(255)",
+          "description": "Encrypted password"
+        }
+      ]
+    },
+    {
+      "table_name": "platform.",
+      "fields": [
+        {
+          "name": "id",
+          "type": "INTEGER",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME",
+          "description": "Creation timestamp"
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)",
+          "description": "Name"
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "description": "Description"
+        },
+        {
+          "name": "active",
+          "type": "BOOLEAN",
+          "description": "Whether it's active"
+        }
+      ]
+    },
+    {
+      "table_name": "payment",
+      "fields": [
+        {
+          "name": "id",
+          "type": "INTEGER",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME",
+          "description": "Creation timestamp"
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)",
+          "description": "Name"
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "description": "Description"
+        },
+        {
+          "name": "active",
+          "type": "BOOLEAN",
+          "description": "Whether it's active"
+        }
+      ]
+    },
+    {
+      "table_name": "product",
+      "fields": [
+        {
+          "name": "id",
+          "type": "INTEGER",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME",
+          "description": "Creation timestamp"
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)",
+          "description": "Product name"
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "description": "Product description"
+        },
+        {
+          "name": "price",
+          "type": "DECIMAL(10,2)",
+          "description": "Product price"
+        }
+      ]
+    },
+    {
+      "table_name": "name,",
+      "fields": [
+        {
+          "name": "id",
+          "type": "INTEGER",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME",
+          "description": "Creation timestamp"
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)",
+          "description": "Name"
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "description": "Description"
+        },
+        {
+          "name": "active",
+          "type": "BOOLEAN",
+          "description": "Whether it's active"
+        }
+      ]
+    },
+    {
+      "table_name": "notification",
+      "fields": [
+        {
+          "name": "id",
+          "type": "INTEGER",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME",
+          "description": "Creation timestamp"
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)",
+          "description": "Name"
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "description": "Description"
+        },
+        {
+          "name": "active",
+          "type": "BOOLEAN",
+          "description": "Whether it's active"
+        }
+      ]
+    },
+    {
+      "table_name": "report",
+      "fields": [
+        {
+          "name": "id",
+          "type": "INTEGER",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME",
+          "description": "Creation timestamp"
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)",
+          "description": "Name"
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "description": "Description"
+        },
+        {
+          "name": "active",
+          "type": "BOOLEAN",
+          "description": "Whether it's active"
+        }
+      ]
+    },
+    {
+      "table_name": "account",
+      "fields": [
+        {
+          "name": "id",
+          "type": "INTEGER",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME",
+          "description": "Creation timestamp"
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)",
+          "description": "Name"
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "description": "Description"
+        },
+        {
+          "name": "active",
+          "type": "BOOLEAN",
+          "description": "Whether it's active"
+        }
+      ]
+    }
+  ],
+  "pseudocode": {
+    "createCustomer": "\nfunction createCustomer(data):\n    // Check if data is valid\n    if not isValid(data):\n        return error(\"Invalid data\")\n    \n    // Create new record\n    newRecord = {\n        \"name\": data.name,\n        \"created_at\": getCurrentTime()\n    }\n    \n    // Save to database\n    id = database.insert(\"customer\", newRecord)\n    \n    // Return the ID of the new record\n    return { \"id\": id, \"success\": true }\n",
+    "getCustomer": "\nfunction getCustomer(id):\n    // Find record in database\n    record = database.findById(\"customer\", id)\n    \n    // Check if record exists\n    if record is null:\n        return error(\"Not found\")\n    \n    // Return the record\n    return record\n",
+    "createAdmin": "\nfunction createAdmin(data):\n    // Check if data is valid\n    if not isValid(data):\n        return error(\"Invalid data\")\n    \n    // Create new record\n    newRecord = {\n        \"name\": data.name,\n        \"created_at\": getCurrentTime()\n    }\n    \n    // Save to database\n    id = database.insert(\"admin\", newRecord)\n    \n    // Return the ID of the new record\n    return { \"id\": id, \"success\": true }\n",
+    "getAdmin": "\nfunction getAdmin(id):\n    // Find record in database\n    record = database.findById(\"admin\", id)\n    \n    // Check if record exists\n    if record is null:\n        return error(\"Not found\")\n    \n    // Return the record\n    return record\n",
+    "createOrder": "\nfunction createOrder(data):\n    // Check if data is valid\n    if not isValid(data):\n        return error(\"Invalid data\")\n    \n    // Create new record\n    newRecord = {\n        \"name\": data.name,\n        \"created_at\": getCurrentTime()\n    }\n    \n    // Save to database\n    id = database.insert(\"order\", newRecord)\n    \n    // Return the ID of the new record\n    return { \"id\": id, \"success\": true }\n",
+    "getOrder": "\nfunction getOrder(id):\n    // Find record in database\n    record = database.findById(\"order\", id)\n    \n    // Check if record exists\n    if record is null:\n        return error(\"Not found\")\n    \n    // Return the record\n    return record\n",
+    "createUser": "\nfunction createUser(data):\n    // Check if data is valid\n    if not isValid(data):\n        return error(\"Invalid data\")\n    \n    // Create new record\n    newRecord = {\n        \"name\": data.name,\n        \"created_at\": getCurrentTime()\n    }\n    \n    // Save to database\n    id = database.insert(\"user\", newRecord)\n    \n    // Return the ID of the new record\n    return { \"id\": id, \"success\": true }\n",
+    "getUser": "\nfunction getUser(id):\n    // Find record in database\n    record = database.findById(\"user\", id)\n    \n    // Check if record exists\n    if record is null:\n        return error(\"Not found\")\n    \n    // Return the record\n    return record\n",
+    "createPlatform.": "\nfunction createPlatform.(data):\n    // Check if data is valid\n    if not isValid(data):\n        return error(\"Invalid data\")\n    \n    // Create new record\n    newRecord = {\n        \"name\": data.name,\n        \"created_at\": getCurrentTime()\n    }\n    \n    // Save to database\n    id = database.insert(\"platform.\", newRecord)\n    \n    // Return the ID of the new record\n    return { \"id\": id, \"success\": true }\n",
+    "getPlatform.": "\nfunction getPlatform.(id):\n    // Find record in database\n    record = database.findById(\"platform.\", id)\n    \n    // Check if record exists\n    if record is null:\n        return error(\"Not found\")\n    \n    // Return the record\n    return record\n",
+    "createPayment": "\nfunction createPayment(data):\n    // Check if data is valid\n    if not isValid(data):\n        return error(\"Invalid data\")\n    \n    // Create new record\n    newRecord = {\n        \"name\": data.name,\n        \"created_at\": getCurrentTime()\n    }\n    \n    // Save to database\n    id = database.insert(\"payment\", newRecord)\n    \n    // Return the ID of the new record\n    return { \"id\": id, \"success\": true }\n",
+    "getPayment": "\nfunction getPayment(id):\n    // Find record in database\n    record = database.findById(\"payment\", id)\n    \n    // Check if record exists\n    if record is null:\n        return error(\"Not found\")\n    \n    // Return the record\n    return record\n",
+    "createProduct": "\nfunction createProduct(data):\n    // Check if data is valid\n    if not isValid(data):\n        return error(\"Invalid data\")\n    \n    // Create new record\n    newRecord = {\n        \"name\": data.name,\n        \"created_at\": getCurrentTime()\n    }\n    \n    // Save to database\n    id = database.insert(\"product\", newRecord)\n    \n    // Return the ID of the new record\n    return { \"id\": id, \"success\": true }\n",
+    "getProduct": "\nfunction getProduct(id):\n    // Find record in database\n    record = database.findById(\"product\", id)\n    \n    // Check if record exists\n    if record is null:\n        return error(\"Not found\")\n    \n    // Return the record\n    return record\n",
+    "createName,": "\nfunction createName,(data):\n    // Check if data is valid\n    if not isValid(data):\n        return error(\"Invalid data\")\n    \n    // Create new record\n    newRecord = {\n        \"name\": data.name,\n        \"created_at\": getCurrentTime()\n    }\n    \n    // Save to database\n    id = database.insert(\"name,\", newRecord)\n    \n    // Return the ID of the new record\n    return { \"id\": id, \"success\": true }\n",
+    "getName,": "\nfunction getName,(id):\n    // Find record in database\n    record = database.findById(\"name,\", id)\n    \n    // Check if record exists\n    if record is null:\n        return error(\"Not found\")\n    \n    // Return the record\n    return record\n",
+    "createNotification": "\nfunction createNotification(data):\n    // Check if data is valid\n    if not isValid(data):\n        return error(\"Invalid data\")\n    \n    // Create new record\n    newRecord = {\n        \"name\": data.name,\n        \"created_at\": getCurrentTime()\n    }\n    \n    // Save to database\n    id = database.insert(\"notification\", newRecord)\n    \n    // Return the ID of the new record\n    return { \"id\": id, \"success\": true }\n",
+    "getNotification": "\nfunction getNotification(id):\n    // Find record in database\n    record = database.findById(\"notification\", id)\n    \n    // Check if record exists\n    if record is null:\n        return error(\"Not found\")\n    \n    // Return the record\n    return record\n",
+    "createReport": "\nfunction createReport(data):\n    // Check if data is valid\n    if not isValid(data):\n        return error(\"Invalid data\")\n    \n    // Create new record\n    newRecord = {\n        \"name\": data.name,\n        \"created_at\": getCurrentTime()\n    }\n    \n    // Save to database\n    id = database.insert(\"report\", newRecord)\n    \n    // Return the ID of the new record\n    return { \"id\": id, \"success\": true }\n",
+    "getReport": "\nfunction getReport(id):\n    // Find record in database\n    record = database.findById(\"report\", id)\n    \n    // Check if record exists\n    if record is null:\n        return error(\"Not found\")\n    \n    // Return the record\n    return record\n",
+    "createAccount": "\nfunction createAccount(data):\n    // Check if data is valid\n    if not isValid(data):\n        return error(\"Invalid data\")\n    \n    // Create new record\n    newRecord = {\n        \"name\": data.name,\n        \"created_at\": getCurrentTime()\n    }\n    \n    // Save to database\n    id = database.insert(\"account\", newRecord)\n    \n    // Return the ID of the new record\n    return { \"id\": id, \"success\": true }\n",
+    "getAccount": "\nfunction getAccount(id):\n    // Find record in database\n    record = database.findById(\"account\", id)\n    \n    // Check if record exists\n    if record is null:\n        return error(\"Not found\")\n    \n    // Return the record\n    return record\n"
+  },
+  "original_requirements": "The system should allow users to create and manage their product listings. Each product must have a name, description, price, and inventory quantity. Users should be able to upload images for their products. Customers should be able to search for products by name and filter by price range. They should also be able to view product details and add products to their shopping cart. The system must handle order processing, including payment processing and order tracking. Customers should receive email notifications when their order status changes. Administrators should be able to manage user accounts and approve new product listings before they go live on the platform. The system should generate reports on sales performance and inventory levels."
+}

@@ -1,0 +1,191 @@
+[
+  {
+    "name": "User",
+    "fields": [
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "constraints": [
+          "PRIMARY KEY"
+        ]
+      },
+      {
+        "name": "name",
+        "type": "VARCHAR(100)",
+        "constraints": [
+          "NOT NULL"
+        ]
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "constraints": [
+          "DEFAULT CURRENT_TIMESTAMP"
+        ]
+      },
+      {
+        "name": "updated_at",
+        "type": "TIMESTAMP",
+        "constraints": [
+          "DEFAULT CURRENT_TIMESTAMP"
+        ]
+      },
+      {
+        "name": "email",
+        "type": "VARCHAR(100)",
+        "constraints": [
+          "UNIQUE"
+        ]
+      },
+      {
+        "name": "password",
+        "type": "VARCHAR(255)",
+        "constraints": [
+          "NOT NULL"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "And",
+    "fields": [
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "constraints": [
+          "PRIMARY KEY"
+        ]
+      },
+      {
+        "name": "name",
+        "type": "VARCHAR(100)",
+        "constraints": [
+          "NOT NULL"
+        ]
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "constraints": [
+          "DEFAULT CURRENT_TIMESTAMP"
+        ]
+      },
+      {
+        "name": "updated_at",
+        "type": "TIMESTAMP",
+        "constraints": [
+          "DEFAULT CURRENT_TIMESTAMP"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Platform",
+    "fields": [
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "constraints": [
+          "PRIMARY KEY"
+        ]
+      },
+      {
+        "name": "name",
+        "type": "VARCHAR(100)",
+        "constraints": [
+          "NOT NULL"
+        ]
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "constraints": [
+          "DEFAULT CURRENT_TIMESTAMP"
+        ]
+      },
+      {
+        "name": "updated_at",
+        "type": "TIMESTAMP",
+        "constraints": [
+          "DEFAULT CURRENT_TIMESTAMP"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "For",
+    "fields": [
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "constraints": [
+          "PRIMARY KEY"
+        ]
+      },
+      {
+        "name": "name",
+        "type": "VARCHAR(100)",
+        "constraints": [
+          "NOT NULL"
+        ]
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "constraints": [
+          "DEFAULT CURRENT_TIMESTAMP"
+        ]
+      },
+      {
+        "name": "updated_at",
+        "type": "TIMESTAMP",
+        "constraints": [
+          "DEFAULT CURRENT_TIMESTAMP"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Product",
+    "fields": [
+      {
+        "name": "id",
+        "type": "INTEGER",
+        "constraints": [
+          "PRIMARY KEY"
+        ]
+      },
+      {
+        "name": "name",
+        "type": "VARCHAR(100)",
+        "constraints": [
+          "NOT NULL"
+        ]
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "constraints": [
+          "DEFAULT CURRENT_TIMESTAMP"
+        ]
+      },
+      {
+        "name": "updated_at",
+        "type": "TIMESTAMP",
+        "constraints": [
+          "DEFAULT CURRENT_TIMESTAMP"
+        ]
+      },
+      {
+        "name": "description",
+        "type": "TEXT",
+        "constraints": []
+      },
+      {
+        "name": "price",
+        "type": "DECIMAL(10,2)",
+        "constraints": []
+      }
+    ]
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "createUser": "\nfunction createUser(data):\n    validate(data)\n    newRecord = new User(data)\n    id = database.save(newRecord)\n    return id\n",
+  "getUser": "\nfunction getUser(id):\n    record = database.findById(\"User\", id)\n    if not record:\n        return null\n    return record\n",
+  "updateUser": "\nfunction updateUser(id, data):\n    validate(data)\n    record = database.findById(\"User\", id)\n    if not record:\n        return false\n    record.update(data)\n    database.save(record)\n    return true\n",
+  "deleteUser": "\nfunction deleteUser(id):\n    record = database.findById(\"User\", id)\n    if not record:\n        return false\n    database.delete(record)\n    return true\n",
+  "createAnd": "\nfunction createAnd(data):\n    validate(data)\n    newRecord = new And(data)\n    id = database.save(newRecord)\n    return id\n",
+  "getAnd": "\nfunction getAnd(id):\n    record = database.findById(\"And\", id)\n    if not record:\n        return null\n    return record\n",
+  "updateAnd": "\nfunction updateAnd(id, data):\n    validate(data)\n    record = database.findById(\"And\", id)\n    if not record:\n        return false\n    record.update(data)\n    database.save(record)\n    return true\n",
+  "deleteAnd": "\nfunction deleteAnd(id):\n    record = database.findById(\"And\", id)\n    if not record:\n        return false\n    database.delete(record)\n    return true\n",
+  "createPlatform": "\nfunction createPlatform(data):\n    validate(data)\n    newRecord = new Platform(data)\n    id = database.save(newRecord)\n    return id\n",
+  "getPlatform": "\nfunction getPlatform(id):\n    record = database.findById(\"Platform\", id)\n    if not record:\n        return null\n    return record\n",
+  "updatePlatform": "\nfunction updatePlatform(id, data):\n    validate(data)\n    record = database.findById(\"Platform\", id)\n    if not record:\n        return false\n    record.update(data)\n    database.save(record)\n    return true\n",
+  "deletePlatform": "\nfunction deletePlatform(id):\n    record = database.findById(\"Platform\", id)\n    if not record:\n        return false\n    database.delete(record)\n    return true\n",
+  "createFor": "\nfunction createFor(data):\n    validate(data)\n    newRecord = new For(data)\n    id = database.save(newRecord)\n    return id\n",
+  "getFor": "\nfunction getFor(id):\n    record = database.findById(\"For\", id)\n    if not record:\n        return null\n    return record\n",
+  "updateFor": "\nfunction updateFor(id, data):\n    validate(data)\n    record = database.findById(\"For\", id)\n    if not record:\n        return false\n    record.update(data)\n    database.save(record)\n    return true\n",
+  "deleteFor": "\nfunction deleteFor(id):\n    record = database.findById(\"For\", id)\n    if not record:\n        return false\n    database.delete(record)\n    return true\n",
+  "createProduct": "\nfunction createProduct(data):\n    validate(data)\n    newRecord = new Product(data)\n    id = database.save(newRecord)\n    return id\n",
+  "getProduct": "\nfunction getProduct(id):\n    record = database.findById(\"Product\", id)\n    if not record:\n        return null\n    return record\n",
+  "updateProduct": "\nfunction updateProduct(id, data):\n    validate(data)\n    record = database.findById(\"Product\", id)\n    if not record:\n        return false\n    record.update(data)\n    database.save(record)\n    return true\n",
+  "deleteProduct": "\nfunction deleteProduct(id):\n    record = database.findById(\"Product\", id)\n    if not record:\n        return false\n    database.delete(record)\n    return true\n"
+}

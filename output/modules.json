@@ -1,0 +1,73 @@
+[
+  {
+    "name": "AuthModule",
+    "description": "Handles user authentication and session management",
+    "responsibilities": [
+      "Login",
+      "Logout",
+      "Password reset"
+    ]
+  },
+  {
+    "name": "DataAccessModule",
+    "description": "Provides database access functionality",
+    "responsibilities": [
+      "CRUD operations",
+      "Connection management"
+    ]
+  },
+  {
+    "name": "ViewProductDetailsAddProductsTheirShoppingCartModule",
+    "description": "Handles view product details add products their shopping cart functionality",
+    "responsibilities": [
+      "View product details add products their shopping cart",
+      "Data validation",
+      "Business logic"
+    ]
+  },
+  {
+    "name": "SearchProductsByNameFilterByPriceRangeModule",
+    "description": "Handles search products by name filter by price range functionality",
+    "responsibilities": [
+      "Search products by name filter by price range",
+      "Data validation",
+      "Business logic"
+    ]
+  },
+  {
+    "name": "CreateManageTheirProductListingsModule",
+    "description": "Handles create manage their product listings functionality",
+    "responsibilities": [
+      "Create manage their product listings",
+      "Data validation",
+      "Business logic"
+    ]
+  },
+  {
+    "name": "ManageUserAccountsApproveNewProductListingsBeforeTheyGoLiveOnPlatformModule",
+    "description": "Handles manage user accounts approve new product listings before they go live on platform functionality",
+    "responsibilities": [
+      "Manage user accounts approve new product listings before they go live on platform",
+      "Data validation",
+      "Business logic"
+    ]
+  },
+  {
+    "name": "GenerateReportsOnSalesPerformanceInventoryLevelsModule",
+    "description": "Handles generate reports on sales performance inventory levels functionality",
+    "responsibilities": [
+      "Generate reports on sales performance inventory levels",
+      "Data validation",
+      "Business logic"
+    ]
+  },
+  {
+    "name": "HandleOrderProcessingModule",
+    "description": "Handles handle order processing functionality",
+    "responsibilities": [
+      "Handle order processing",
+      "Data validation",
+      "Business logic"
+    ]
+  }
+]
